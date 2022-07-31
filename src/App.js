@@ -1,6 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Photos from "./pages/Photos";
 import Posts from "./pages/Postspage";
@@ -10,8 +9,7 @@ import Layout from "./components/Layout";
 
 function App() {
   return (
-    <>
-      
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Homepage />} />
@@ -20,7 +18,7 @@ function App() {
           <Route path="contacts" element={<Contacts />} />
         </Route>
       </Routes>
-    </>
+    </BrowserRouter>
   );
 }
 
