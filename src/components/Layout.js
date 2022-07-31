@@ -7,12 +7,11 @@ const Layout = () => {
   return (
     <>
       <div className="Header">
-        <NavLink to="/" className={setActive}  >Home</NavLink>
-        <NavLink to="/posts" className={setActive} >Posts</NavLink>
-        <NavLink to="/photos" className={setActive} >Photos</NavLink>
-        <NavLink to="/contacts" className={setActive} >Contacts</NavLink>
+        <NavLink to="/Homework-19" className={setActive} >Home</NavLink>
+        <NavLink to="/Homework-19/posts" className={setActive} >Posts</NavLink>
+        <NavLink to="/Homework-19/photos" className={setActive} >Photos</NavLink>
+        <NavLink to="/Homework-19/contacts" className={setActive} >Contacts</NavLink>
       </div>
-
       <div className='container'>
         <Outlet />
       </div>
