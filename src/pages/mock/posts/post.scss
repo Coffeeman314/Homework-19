@@ -1,0 +1,88 @@
+$backgroundColor: #3c4058;
+$fontColor: #fff;
+$itemsColor: #8899a6;
+%flex-row{
+  display: flex;
+  flex-direction: row;
+}
+.post {
+  width: 500px;
+  border: none;
+  border-radius: 3px;
+  background-color: $backgroundColor;
+  color: $fontColor;
+  &Header {
+    @extend %flex-row;
+    height: 50px;
+    .avatar {
+      padding-left: 15px;
+      margin-top: 10px;
+      img {
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      margin-right: 5px;
+      object-fit: cover;
+
+      }
+    }
+    &Content {
+      font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      .author {
+        @extend %flex-row;
+        align-items: center;
+        padding-top: 2px;
+        .author-name {
+          font-weight: bold;
+        }
+        svg {
+          margin: 0px 7px 0 5px;
+        }
+        .point {
+          margin: 6px 5px 0 5px;
+          width: 2px;
+          height: 2px;
+          border-radius: 50%;
+          background-color:$itemsColor;
+        }
+        .author-nickname, .date {
+          color: $itemsColor
+        }
+      }
+    }
+  }
+  &Main {
+    padding-left: 60px;
+    img {
+      
+      width: 430px;
+      border: none;
+      border-radius: 10px;
+    }
+  }
+  &Footer {
+    @extend %flex-row;
+    justify-content: flex-start;
+    gap: 60px;
+    padding: 0 10px 0 60px;
+    .footerItem {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: $itemsColor;
+    }
+    svg {
+      height: 25px;
+      width: 25px;
+    }
+    path {
+      fill: $itemsColor
+    }
+  }
+}
+
+
+

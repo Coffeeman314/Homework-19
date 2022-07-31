@@ -1,0 +1,136 @@
+$background: rgb(255, 255, 255);
+$background-light: #3c4058;
+$border-color: #888888;
+$button-hover: #aeaeae;
+$button-active: #cdb7b2;
+
+%input-style {
+  height: 31px;
+  width: 130px;
+  background-color: $background-light;
+  border: solid 2px $border-color;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #565656;
+}
+
+.menu {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  background-color: $background;
+  width: 600px;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+
+  .menu-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+    background-color: $background-light;
+
+    border-top: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 5px;
+
+      button {
+        width: 35px;
+        height: 35px;
+        border: solid 2px $border-color;
+        border-radius: 5px;
+        font-size: 16px;
+        font-weight: 600;
+        color: $background-light;
+
+        &:hover {
+          background-color: $background-light;
+          color: #536351;
+        }
+      }
+
+      .deactivatedButton {
+        background-color: #d5e3d2;
+      }
+
+      .activeButton {
+        background-color: $background-light;
+      }
+    }
+
+    input {
+      @extend %input-style;
+
+      &:focus-visible {
+        @extend %input-style;
+        outline-style: none;
+      }
+    }
+  }
+}
+
+.contacts {
+  background-color: $background;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: $background;
+
+  .contact {
+    display: flex;
+    flex-direction: row;
+    background-color: $background-light;
+    width: 230px;
+    height: 60px;
+    border: solid 2px $border-color;
+    border-radius: 8px;
+
+    .contact-avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      height: 60px;
+
+      .avatar {
+        width: 40px;
+        height: 40px;
+        border: solid 2px $border-color;
+        border-radius: 50%;
+        background-color: $background-light;
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: 50% 50%;
+      }
+    }
+
+    .contact-data {
+      width: 70%;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+}
